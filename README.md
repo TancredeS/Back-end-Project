@@ -7,6 +7,7 @@ In the future, I would like to be able to make my application more beautiful in 
 The potential biggest problem with this app is obviously the lack of payment, which makes it unattractive, because you need basic users to be able to attract others.
 
 How to use my application:
+When launching the server, you have to take the displayed url, then add a "userid" after it, like the userid "1", that I used for all my tests.
 In the index, the main page, the user can choose which cation he wants to perform.
 If he wants to create a garment, he will just have to enter each characteristic of the garment to create it. If he does not enter anything, his attribute will be empty.
 If you want to modify a garment, first you have to enter the name of the garment you want to modify in the first box, then you can enter each of its attributes. As in the case of creation, if he does not enter anything for an attribute, it will still be modified, and its characteristic will be empty.
