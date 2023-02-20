@@ -1,0 +1,20 @@
+<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Here are the characteristics of the clothes in a list: </div>
+
+<!-- This page is here to show all the clothes that the user created.-->
+
+<!-- I use a for here to get all the elements of "clothes_list", which is basically my table.
+I can get all the attributes of each objects then with clothes.ATTRIBUTENAME.-->
+<br>
+{% for clothes in clothes_list %}
+<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> 
+    Name : {{clothes.ClothesName}}
+    | Color : {{clothes.ClothesColor}}
+    | Size : {{clothes.ClothesSize}}
+    | Brand : {{clothes.ClothesBrand}}
+    | Material : {{clothes.ClothesMaterial}} </div>
+<br>
+{% endfor %}
+<br>
+<a href="../{{userid}}" class="btn btn-primary" style="margin-left: 410px;">Go back to the main page</a>
+
+
