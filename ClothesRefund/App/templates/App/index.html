@@ -1,23 +1,34 @@
-<!--  This page is the index page, where the user can go to all the existing pages, and so chosing what action he wants to do.-->
+<!-- Link to css index page here -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+<!-- Link for the css-->
+<link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+<!-- Font Awesome 6 icons. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Click on this button to create a new clothe. <button><a class= "btn btn-primary" href="{{userid}}/addclothes" >Register new clothes here</a></button></div>
-<br>
+    <!--  This page is the index page, where the user can go to all the existing pages, and so chosing what action he wants to do.-->
 
-<!-- This first button is here to create a new clothe -->
+    <header class="text-center-desktop text-center-mobile theme-light">
+        <div class="container-text">		
+            <h1>Welcome to ClothesRefund</h1>
+            <h2>You have the choice to choose what you want to do here:</h2>
+        </div>
+        <div class="container-btn">
+                <!-- This first button is here to create a new clothe -->
+            <a href="{{userid}}/addclothes" class="btn btn-solid"><i class="fa-solid fa-plus"></i><span>Register new clothes here :</span></a>
 
-<br>
-<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Click on this button to remove clothes. <button><a class= "btn btn-primary" href="{{userid}}/remove_clothes">Remove clothes here</a></button></div>
-<br>
+                <!-- This second button is here to remove the user clothes -->
+            <a href="{{userid}}/remove_clothes" class="btn btn-solid"><i class="fa-solid fa-trash"></i><span>Remove clothes here :</span></a>
 
-<!-- This second button is here to remove a clothe -->
+                <!-- This third button is here to edit the user clothes -->
+            <a  href="{{userid}}/edit_clothes" class="btn btn-solid">
+            <i class="fa-solid fa-pen-to-square"></i><span>Edit your clothes here :</span></a>
 
-<br>
-<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Click on this button to edit your clothes. <button><a class= "btn btn-primary" href="{{userid}}/edit_clothes">Edit clothes here</a></button></div>
-<br>
+                <!-- This last button is here to see the list of clothes -->
 
-<!-- This third button is here to edit the user clothes -->
+            <a href="{{userid}}/clothes_list" class="btn btn-solid"><i class="fa-solid fa-list"></i><span>See the list of clothes here :</span></a>
 
-<br>
-<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Click on this button to see the list of your clothes. <button><a class= "btn btn-primary" href="{{userid}}/clothes_list">See the list of clothes here</a></button></div>
-
-<!-- This last button is here to see the list of clothes -->
+        </div>	
+				<figure>
+					<img src="../../../static/img/clothes-removebg-preview.png" alt="Placeholder image">
+				</figure></header>

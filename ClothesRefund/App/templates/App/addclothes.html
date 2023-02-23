@@ -1,47 +1,64 @@
+<!-- Link to css index page here -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/aste.css' %}"/>
+<!-- Link for the css-->
+<link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+<!-- Font Awesome 6 icons. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- This is the template of the page created to add new clothes -->
-<form method="POST">
-    {% csrf_token %}
-    <!-- The code under is here to get the clothe's name -->
-    <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
-        <label for="name">Name  :</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Enter the chosen name">
-    </div>
-
-    <!-- The div are all the same, to align all the texts and buttons at the same position.
-    The user can put all the characteristics in the input to create his clothe. 
-    Input allows me to directly retrieve what the user writes and assign it as an attribute to the object.-->
-
-    <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
-        <label for="brand">Brand :</label>
-        <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter the clothe's brand">
-    </div>
-
-    <!-- The code above is here to get the clothe's brand -->
-
-    <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
-        <label for="color">Color :</label>
-        <input type="text" class="form-control" id="color" name="color" placeholder="Enter the clothe's color">
-    </div>
-
-    <!-- The code above is here to get the clothe's material -->
-
-    <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
-        <label for="category">Material :</label>
-        <input type="text" class="form-control" id="material" name="material" placeholder="Enter the clothe's material">
-    </div>
-
-    <!-- The code above is here to get the clothe's size -->
-
-    <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 30px;"> 
-        <label for="size">Size   :</label>
-        <input type="text" class="form-control" id="size" name="size" placeholder="Enter its size">
-        <br>
-
-        <!-- This submit button, as the same at the Go to the main page button are the same on every templates, the first one is a button to use the method "POST" in views, created to get all the characteristics of the clothe and create him, and the second button isn't really a button. I could not put the button tag on it, because it didn't work with it, and did the same as the submit button, which is not the goal of this button. that's why I only put a text with a href link, which is less pleasing to the eye. -->
+<header class="theme-light cols-2-half text-center-mobile">
+    <div class="col-2 col-text">
+        <h1><div style="margin:0; margin-top: 15px;margin-bottom: 10px;">You can register new clothes here :</div></h1>
+        <h2><div style="margin:0; margin-top: 15px;margin-bottom: 10px;">Create your clothe by entering his characteristics :</div></h2>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- The code under is here to get the clothe's name -->
+            <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
+                <label for="name">Name  :</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter the chosen name" style="padding: 2px 1px; border: 1px solid blue">
+            </div>
         
-        <button type="submit" class="btn btn-primary" style="width:90px; margin-left: 90px; margin-top: 40px;margin-bottom: 10px;">Submit</button>
-</form>
-<br>
-<br>
-<br>
-<a href="../{{userid}}" class="btn btn-primary" style=" margin-left: 35px; margin-top: 15px;margin-bottom: 10px;">Go back to the main page</a>
+            <!-- The div are all the same, to align all the texts and buttons at the same position.
+            The user can put all the characteristics in the input to create his clothe. 
+            Input allows me to directly retrieve what the user writes and assign it as an attribute to the object.-->
+        
+            <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
+                <label for="brand">Brand :</label>
+                <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter the clothe's brand" style="padding: 2px 1px; border: 1px solid blue">
+            </div>
+        
+            <!-- The code above is here to get the clothe's brand -->
+        
+            <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
+                <label for="color">Color :</label>
+                <input type="text" class="form-control" id="color" name="color" placeholder="Enter the clothe's color" style="padding: 2px 1px; border: 1px solid blue">
+            </div>
+        
+            <!-- The code above is here to get the clothe's material -->
+        
+            <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">
+                <label for="category">Material :</label>
+                <input type="text" class="form-control" id="material" name="material" placeholder="Enter the clothe's material" style="padding: 2px 1px; border: 1px solid blue">
+            </div>
+        
+            <!-- The code above is here to get the clothe's size -->
+        
+            <div class="form-group" style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 30px;"> 
+                <label for="size">Size   :</label>
+                <input type="text" class="form-control" id="size" name="size" placeholder="Enter its size" style="padding: 2px 1px; border: 1px solid blue">
+                <br>
+        
+                <!-- This submit button, as the same at the Go to the main page button are the same on every templates, the first one is a button to use the method "POST" in views, created to get all the characteristics of the clothe and create him, and the second button isn't really a button. I could not put the button tag on it, because it didn't work with it, and did the same as the submit button, which is not the goal of this button. that's why I only put a text with a href link, which is less pleasing to the eye. -->
+        
+                <div class="container-btn">
+                    <button class="btn btn-solid"><i class="fa-solid fa-check"></i><span>Submit</span></button>
+                </div>
+                
+        </form>
+        <a href="../{{userid}}" class="btn btn-primary" style=" margin-left: 35px; margin-top: 15px;margin-bottom: 10px;">Go back to the main page</a>
+    </div>
+</header>
+
+
+

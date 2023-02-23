@@ -1,4 +1,15 @@
-<div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> Here are the characteristics of the clothes in a list: </div>
+<!-- Link to css index page here -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/remove.css' %}"/>
+<!-- Link for the css-->
+<link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+<!-- Font Awesome 6 icons. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<header class="theme-light cols-2-half text-center-mobile">
+    <div class="col-2 col-text">
+<h1><div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px; color: rebeccapurple;"> Here are the characteristics of the clothes in a list: </div></h1>
 
 <!-- This page is here to show all the clothes that the user created.-->
 
@@ -7,14 +18,14 @@ I can get all the attributes of each objects then with clothes.ATTRIBUTENAME.-->
 <br>
 {% for clothes in clothes_list %}
 <div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> 
-    Name : {{clothes.ClothesName}}
-    | Color : {{clothes.ClothesColor}}
-    | Size : {{clothes.ClothesSize}}
-    | Brand : {{clothes.ClothesBrand}}
-    | Material : {{clothes.ClothesMaterial}} </div>
+    <div style="color: purple; font-size: x-large;"><b>{{clothes.ClothesName}}</b> :</div>
+    <b>Color</b> : {{clothes.ClothesColor}}
+    | <b>Size</b> : {{clothes.ClothesSize}}
+    | <b>Brand</b> : {{clothes.ClothesBrand}}
+    | <b>Material</b> : {{clothes.ClothesMaterial}} </div>
 <br>
 {% endfor %}
 <br>
-<a href="../{{userid}}" class="btn btn-primary" style="margin-left: 410px;">Go back to the main page</a>
-
-
+<a href="../{{userid}}" class="btn btn-primary">Go back to the main page</a>
+</header>
+</div>

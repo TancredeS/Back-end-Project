@@ -1,12 +1,27 @@
+<!-- Link to css index page here -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/remove.css' %}"/>
+<!-- Link for the css-->
+<link rel="stylesheet" href="https://lunevedy.com/assets/2.0/css/lunevedy.min.css" />
+<!-- Font Awesome 6 icons. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 <!-- This page is here to remove clothes, by getting again the name of the chosen clothe, with the form, as I've done in the edit clothes page. {{ form.as_p}} is here to ask the name of the chosen object the user wants to remove.-->
 
-<form method='POST'>
-    <div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">You can remove clothes here :</div>
-    {% csrf_token %}
-    <div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;">Choose the clothes you want to remove by entering its name:</div>
-    <div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> {{ form.as_p}} </div>
-    <br>
-    <button type="submit" class="btn btn-primary" style="margin-left : 400px">Submit</button>
-</form>
-<br>
-<a href="../{{userid}}" class="btn btn-primary" style="margin-left : 340px">Go back to the main page</a>
+       <header class="theme-light cols-2-half text-center-mobile">
+        <div class="col-2 col-text">
+            <h1><div style="margin:0; margin-top: 15px;margin-bottom: 10px;">You can remove clothes here :</div></h1>
+            <h2><div style="margin:0; margin-top: 15px;margin-bottom: 10px;">Choose the clothes you want to remove by entering its name: </div></h2>
+        <form method='POST'>
+            {% csrf_token %}
+            <h2><div style="width:800px; margin:0 auto; margin-top: 15px;margin-bottom: 10px;"> {{ form.as_p}} </div></h2>
+            <br>
+            <div class="container-btn">
+                <button class="btn btn-solid"><i class="fa-solid fa-check"></i><span>Submit</span></button>
+            </div>
+        </form>
+        <br>
+        <a href="../{{userid}}" class="btn btn-primary" style="margin-left : 65px">Go back to the main page</a>
+        </div>
+    </header>
